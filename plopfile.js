@@ -11,18 +11,18 @@ module.exports = function(plop) {
         actions: [
             {
                 type: 'add',
-                path: 'components/{{name}}/{{name}}.css',
-                templateFile: 'templates/component.css'
+                path: 'src/components/{{pascalCase name}}/{{name}}.css',
+                templateFile: 'templates/component.css.hbs'
             },
             {
                 type: 'add',
-                path: 'components/{{name}}/{{name}}.js',
-                templateFile: 'templates/component.js'
+                path: 'src/components/{{pascalCase name}}/{{name}}.js',
+                templateFile: 'templates/component.js.hbs'
             },
             {
                 type: 'add',
-                path: 'components/{{name}}/README.md',
-                templateFile: 'templates/README.md'
+                path: 'src/components/{{pascalCase name}}/README.md',
+                templateFile: 'templates/README.md.hbs'
             }
         ]
     });
