@@ -1,13 +1,13 @@
-class GameUI {
+class WordBox {
     constructor() {
         // Initialize component
     }
 
     render() {
         const element = document.createElement('div');
-        element.innerHTML = `<div class="game-ui">Welcome to GameUI Component</div>`;
+        element.innerHTML = `<div class="word-box">Welcome to WordBox Component</div>`;
         return element;
     }
 }
 
-export default GameUI;
+export default WordBox;
