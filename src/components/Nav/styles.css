@@ -5,6 +5,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     text-align: center;
+    /* Linear gradient and shadow to aid 3D effect */
     background: linear-gradient(to bottom, #333 0%, #555 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -13,6 +14,7 @@
     font-weight: bold;
     font-size: 24px;
     color: white;
+    /* Shadow and spacing for 3D effect */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
 }
