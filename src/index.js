@@ -2,27 +2,39 @@
 import './global.css';
 
 // Components
-import GameUI from './components/GameUI/index.js';
-import TextInput from './components/TextInput/index.js';
+import Nav from './components/Nav/index.js';
 import Timer from './components/Timer/index.js';
+import WordBox from './components/WordBox/index.js';
+import TextInput from './components/TextInput/index.js';
+import Results from './components/Results/index.js';
+
 
 // Logic
 import GameLogic from './logic/GameLogic';
 
 document.addEventListener('DOMContentLoaded', () => {
    
-    // Create instances of components
-    const gameUI = new GameUI();
-    const textInput = new TextInput();
-    const timer =new Timer();
+    // Initialize nav
+    const nav = new Nav().render();
+    document.body.appendChild(nav);
 
-    // Mount components to DOM
-    document.body.appendChild(gameUI.render());
-    document.body.appendChild(textInput.render());
-    document.body.appendChild(timer.render());
+    // Initialize Game View
+    const gameView = document.createElement('div');
+    gameView.appendChild(new Timer().render());
+    gameView.appendChild(new WordBox().render());
+    gameView.appendChild(new TextInput().render());
+
+    // Initialize Results View
+    const resultsView = new Results().render();
+
+    // Mount Views to Document
+    document.body.appendChild(gameView);
+    document.body.appendChild(resultsView);
 
     // Initialize the game logic
     const gameLogic = new GameLogic();
 
-
+    // For Development Purposes
+    gameView.style.display = 'block';
+    resultsView.style.display = 'none';
 });
