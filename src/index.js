@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Game View
     const gameView = document.createElement('div');
-    gameView.appendChild(new Timer.render());
-    gameView.appendChild(new WordBox.render());
-    gameView.appendChild(new TextInput.render());
+    gameView.appendChild(new Timer().render());
+    gameView.appendChild(new WordBox().render());
+    gameView.appendChild(new TextInput().render());
 
     // Initialize Results View
-    const resultsView = new Results.render();
+    const resultsView = new Results().render();
 
     // Mount Views to Document
     document.body.appendChild(gameView);
@@ -34,5 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the game logic
     const gameLogic = new GameLogic();
 
-
+    // For Development Purposes
+    gameView.style.display = 'block';
+    resultsView.style.display = 'none';
 });
