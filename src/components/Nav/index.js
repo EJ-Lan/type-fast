@@ -1,12 +1,15 @@
+import './styles.css';
+
 class Nav {
-    constructor() {
-        // Initialize component
+    constructor(title ="Type Fast") {
+        this.title = title;
     }
 
     render() {
-        const element = document.createElement('div');
-        element.innerHTML = `<div class="nav">Welcome to Nav Component</div>`;
-        return element;
+        const nav = document.createElement('nav');
+        nav.className = 'navbar';
+        nav.innerHTML = `<div class="navbar-brand">${this.title}</div>`;
+        return nav;
     }
 }
 
